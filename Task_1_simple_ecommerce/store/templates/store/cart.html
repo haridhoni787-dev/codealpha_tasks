@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+</head>
+<body>
+
+<h1>Your Cart</h1>
+
+{% if products %}
+    {% for product in products %}
+        <div style="border:1px solid black; padding:10px; margin:10px;">
+            <h2>{{ product.name }}</h2>
+            <img src="{{ product.image.url }}" width="150"><br>
+            <p>Price: ₹{{ product.price }}</p>
+
+            <a href="/remove-from-cart/{{ product.id }}/">
+                <button>Remove</button>
+            </a>
+        </div>
+    {% endfor %}
+
+    <h2>Total Price: ₹{{ total }}</h2>
+
+    <a href="/place-order/">
+        <button>Place Order</button>
+    </a>
+
+{% else %}
+    <p>Cart is empty</p>
+{% endif %}
+
+<br><br>
+<a href="/">Back to Products</a>
+
+</body>
+</html>

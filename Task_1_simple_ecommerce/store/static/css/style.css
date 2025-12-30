@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 18px;
+    color: green;
+}
